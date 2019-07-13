@@ -23,8 +23,13 @@ public class TutorialStart : MonoBehaviour
             {
                 if (hit.transform.gameObject == GameObject.Find("SeasonSwitcher"))
                 {
+                    GameObject seasonSwitcher = hit.transform.gameObject;
                     GetComponentInParent<GetCircleWorldPosition>().seasonSwitcher = hit.transform.gameObject;
-                    hit.transform.gameObject.GetComponent<Collider>().enabled = false;
+                    seasonSwitcher.GetComponent<Collider>().enabled = false;
+                    foreach (Transform child in hit.transform)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
                 }
             }
         }

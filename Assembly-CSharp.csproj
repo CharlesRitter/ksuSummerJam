@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\GetCircleWorldPosition.cs" />
     <Compile Include="Assets\Scripts\GetObjectProximity.cs" />
     <Compile Include="Assets\Scripts\GrowthTest.cs" />
+    <Compile Include="Assets\Scripts\KeyPickupLogic.cs" />
+    <Compile Include="Assets\Scripts\PickupFloatAnimation.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\TutorialStart.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
