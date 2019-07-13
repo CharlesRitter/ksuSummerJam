@@ -11,10 +11,9 @@ public class KeyPickupLogic : MonoBehaviour
     };
 
     public Keys keyType = Keys.SummerKey;
-    private bool collected;
-    private bool isCollectible;
+    public bool collected;
+    public bool isCollectible;
     private MeshRenderer selfRenderer;
-    public bool inProximity;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,19 +35,27 @@ public class KeyPickupLogic : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (keyType == Keys.SummerKey)
+        if (keyType == Keys.SummerKey && other.transform.gameObject.tag == "SeasonCollider")
         {
             isCollectible = true;
+        }
+        else if (isCollectible && other.transform.gameObject.tag == "Player")
+        {
+            collected = true;
+            gameObject.SetActive(false);
         }
         else
         {
             isCollectible = false;
         }
+
+        
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (keyType == Keys.SummerKey)
+        if (keyType == Keys.SummerKey && other.transform.gameObject.tag == "SeasonCollider")
         {
             isCollectible = false;
         }

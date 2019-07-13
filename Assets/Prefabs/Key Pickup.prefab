@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3517205374146981755}
   - component: {fileID: 5300916874088556151}
   - component: {fileID: 3517205374146981752}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Key
   m_TagString: Pickup
   m_Icon: {fileID: 0}
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 1
+  inProximity: 0
 --- !u!114 &3517205374146981752
 MonoBehaviour:
   m_ObjectHideFlags: 0
