@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 2d4185a0caf7eb041a59d141a71ce3b4
-=======
 <<<<<<< HEAD:Assets/Prefabs.meta
 guid: f053a124577ccd446ad8474973d7826f
 =======
 guid: 2d4185a0caf7eb041a59d141a71ce3b4
 >>>>>>> master:Assets/Shaders/Subgraphs.meta
->>>>>>> master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
