@@ -15,12 +15,15 @@ public class GetCircleWorldPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit))
+        if (seasonSwitcher)
         {
-            seasonSwitcher.transform.position = hit.point;
+            RaycastHit hit;
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                seasonSwitcher.transform.position = hit.point;
+            }
         }
     }
 }
