@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ground_Mat
+  m_Name: Ground_Mat_Square
   m_Shader: {fileID: -6465566751694194690, guid: f7821ed528af5af4b95fc59811e55f60,
     type: 3}
   m_ShaderKeywords: 
@@ -37,10 +37,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_44D2ECE3: 0.5
+    - Vector1_44D2ECE3: 0.09
     - Vector1_664ADDFC: 0
     - Vector1_695C339D: 0
-    - Vector1_F182C921: 0.5
+    - Vector1_F182C921: 0.2
     m_Colors:
     - Color_5810BA95: {r: 0.9528302, g: 0.89084226, b: 0.73260057, a: 1}
     - Color_B7923ACB: {r: 1, g: 1, b: 1, a: 1}

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DynamicSnow_Mat
+  m_Name: Snow_Mat_Tutorial
   m_Shader: {fileID: -6465566751694194690, guid: 817569f30da498d4b98f6129a2f862a2,
     type: 3}
   m_ShaderKeywords: 
