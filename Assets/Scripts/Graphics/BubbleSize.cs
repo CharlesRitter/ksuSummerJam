@@ -13,6 +13,7 @@ public class BubbleSize : MonoBehaviour
     {
         psMain = GetComponentInChildren<ParticleSystem>().main;
         baseParticleSize = psMain.startSize.constant;
+        Shader.SetGlobalVector("_BubblePos", transform.position);
         SetBubbleSize(radius);
     }
 
