@@ -6,17 +6,22 @@ public class BubbleSize : MonoBehaviour
 {
     public float radius = 2.5f;
 
+    private ParticleSystem.MainModule psMain;
+    private float baseParticleSize;
+
     void Start()
     {
+        psMain = GetComponentInChildren<ParticleSystem>().main;
+        baseParticleSize = psMain.startSize.constant;
         SetBubbleSize(radius);
     }
 
     public void SetBubbleSize(float newRadius)
     {
         radius = newRadius;
+        psMain.startSize = radius * baseParticleSize;
         transform.localScale = new Vector3(2*radius, 2*radius, 2*radius);
         Shader.SetGlobalFloat("_Radius", radius / 2);
-        Debug.Log("Set the radii, shader's is at " + Shader.GetGlobalFloat("_Radius"));
     }
 
     public void ChangeBubbleSize(float change)
