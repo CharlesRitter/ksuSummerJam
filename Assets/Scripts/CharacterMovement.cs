@@ -16,7 +16,9 @@ public class CharacterMovement : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
 
-    private Vector3 moveDirection = Vector3.zero;
+    Vector3 forceVector;
+    Vector3 moveDirection = Vector3.zero;
+    bool forceApplied;
 
     void Start()
     {
@@ -44,7 +46,18 @@ public class CharacterMovement : MonoBehaviour
         // as an acceleration (ms^-2)
         moveDirection.y -= gravity * Time.deltaTime;
 
+        if(forceApplied) moveDirection += forceVector;
+
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+    }
+
+    public void ApplyForce(Vector3 force){
+        this.forceVector = force;
+        forceApplied = true;
+    }
+
+    public void RemoveForce(){
+        forceApplied = false;
     }
 }

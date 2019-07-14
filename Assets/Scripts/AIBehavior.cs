@@ -27,6 +27,7 @@ public class AIBehavior : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         target = player;
         blowRange = Vector3.Distance(transform.position, blowRangeTransform.position);
+        navMeshAgent.updateRotation = false;
     }
 
     // Start is called before the first frame update
@@ -37,22 +38,15 @@ public class AIBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (melting)
-        {
-            //StartMelting();
-        }
+        FaceTarget(target.transform.position);
+
+        MoveTo(player.transform.position);
+
+        if (GetPlayerDistance() < blowRange)
+            StartBlowing();
         else
         {
-
-            if (blowing) FaceTarget(target.transform.position);
-
-            if (GetPlayerDistance() < blowRange)
-                StartBlowing();
-            else
-            {
-                if (blowing) StopBlowing();
-                MoveTo(player.transform.position);
-            }
+            StopBlowing();
         }
     }
 
@@ -75,9 +69,9 @@ public class AIBehavior : MonoBehaviour
 
     void FaceTarget(Vector3 destination)
     {
-        Vector3 lookPos = destination - transform.position;
-        lookPos.y = 0;
-        Quaternion rotation = Quaternion.LookRotation(lookPos);
+        Vector3 lookpos = destination - transform.position;
+        lookpos.y = 0;
+        Quaternion rotation = Quaternion.LookRotation(lookpos);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed);
     }
 
