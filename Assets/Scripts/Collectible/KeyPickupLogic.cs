@@ -48,9 +48,6 @@ public class KeyPickupLogic : MonoBehaviour
         {
             isCollectible = false;
         }
-
-        
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -59,7 +56,7 @@ public class KeyPickupLogic : MonoBehaviour
         {
             isCollectible = false;
         }
-        else
+        else if (keyType == Keys.WinterKey && other.transform.gameObject.tag == "SeasonCollider")
         {
             isCollectible = true;
         }
