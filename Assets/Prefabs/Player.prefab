@@ -152,6 +152,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4899818779729555097}
     m_Modifications:
+    - target: {fileID: 4346189641780267791, guid: f053d3ddffbae6f4aa0898c96bdc0ce1,
+        type: 3}
+      propertyPath: m_Name
+      value: Snow Trail
+      objectReference: {fileID: 0}
     - target: {fileID: 6181773523749163010, guid: f053d3ddffbae6f4aa0898c96bdc0ce1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -206,11 +211,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4346189641780267791, guid: f053d3ddffbae6f4aa0898c96bdc0ce1,
-        type: 3}
-      propertyPath: m_Name
-      value: Snow Trail
       objectReference: {fileID: 0}
     - target: {fileID: 548170030732859001, guid: f053d3ddffbae6f4aa0898c96bdc0ce1,
         type: 3}
@@ -270,6 +270,11 @@ PrefabInstance:
     - target: {fileID: 548170030732859001, guid: f053d3ddffbae6f4aa0898c96bdc0ce1,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 548170030732859001, guid: f053d3ddffbae6f4aa0898c96bdc0ce1,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6497624209870375303, guid: f053d3ddffbae6f4aa0898c96bdc0ce1,
