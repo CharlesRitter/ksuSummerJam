@@ -629,6 +629,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5300916874088556151, guid: 539a8ecc65d5c884a855f3659b34aeaa,
+        type: 3}
+      propertyPath: keyType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539a8ecc65d5c884a855f3659b34aeaa, type: 3}
 --- !u!1 &469328033
@@ -1262,7 +1267,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 5a9950d18352e2841a57173c6c6c8307,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5a9950d18352e2841a57173c6c6c8307,
         type: 3}
@@ -2117,16 +2122,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeasonSwitcher
       objectReference: {fileID: 0}
-    - target: {fileID: 4523156393158061898, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
-        type: 3}
-      propertyPath: m_TagString
-      value: SeasonCollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4523156393158061898, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4523156393158061902, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2227,30 +2222,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4523156393158061897, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8091696685751488159, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8091696685751488159, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 478415561426733451, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
         type: 3}

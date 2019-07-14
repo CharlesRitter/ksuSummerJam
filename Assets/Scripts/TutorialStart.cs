@@ -31,7 +31,7 @@ public class TutorialStart : MonoBehaviour
                     seasonSwitcher.GetComponent<Collider>().enabled = false;
                     foreach (Transform child in hit.transform)
                     {
-                        child.gameObject.SetActive(true);
+                        child.gameObject.GetComponent<Collider>().enabled = true;
                     }
                 }
             }
