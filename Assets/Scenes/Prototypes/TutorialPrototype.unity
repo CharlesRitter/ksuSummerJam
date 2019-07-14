@@ -523,7 +523,7 @@ PrefabInstance:
     - target: {fileID: 4899818779729555097, guid: c4b2f11063e1bce4983476434f0c6b86,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4899818779729555097, guid: c4b2f11063e1bce4983476434f0c6b86,
         type: 3}
@@ -2055,9 +2055,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951935284}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.47008726, b: 0, a: 0.58431375}
+  m_EffectDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1951935287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951935284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+>>>>>>> b7a20dd3b10fabedbeebaac973948bbbd7e7dc8c
   m_Material: {fileID: 0}
   m_Color: {r: 0.6775098, g: 0.990566, b: 0.9635989, a: 1}
   m_RaycastTarget: 1
@@ -2266,5 +2282,41 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4523156393158061897, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523156393158061897, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091696685751488159, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091696685751488159, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 478415561426733451, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> b7a20dd3b10fabedbeebaac973948bbbd7e7dc8c
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502cd4eb69466084a8e0b2cca4dbe0f9, type: 3}
