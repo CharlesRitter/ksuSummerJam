@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    Transform spawn;
-    public void Respawn()
+    public GameObject spawn;
+
+    private void Respawn(GameObject RespawnPoint)
     {
-        gameObject.transform.position = spawn.position;
+        gameObject.GetComponent<CharacterController>().enabled = false;
+        gameObject.transform.position = spawn.transform.position;
+        gameObject.GetComponent<CharacterController>().enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Damage")
+        {
+            Respawn(spawn);
+        }
+
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraTrigger : MonoBehaviour
 {
     GameObject mainCamera;
+    public GameObject spawnTransition;
     bool inTransition = false;
     public float cameraStop;
     // Start is called before the first frame update
@@ -33,6 +34,7 @@ public class CameraTrigger : MonoBehaviour
         {
             inTransition = true;
             gameObject.GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<PlayerDeath>().spawn = spawnTransition;
         }
         
     }
