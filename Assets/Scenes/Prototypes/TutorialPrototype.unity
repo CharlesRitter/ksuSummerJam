@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -469,7 +469,7 @@ Transform:
   m_GameObject: {fileID: 671351155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0.25}
-  m_LocalScale: {x: 2, y: 3, z: 0.5}
+  m_LocalScale: {x: 2, y: 4, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -999,6 +999,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969309137774881588, guid: c4b2f11063e1bce4983476434f0c6b86,
+        type: 3}
+      propertyPath: gravity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969309137774881588, guid: c4b2f11063e1bce4983476434f0c6b86,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969309137774881588, guid: c4b2f11063e1bce4983476434f0c6b86,
+        type: 3}
+      propertyPath: jumpSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b2f11063e1bce4983476434f0c6b86, type: 3}
