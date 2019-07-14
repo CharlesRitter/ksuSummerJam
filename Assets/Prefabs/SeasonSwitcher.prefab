@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4523156393158061903}
   - component: {fileID: 4523156393158061896}
   - component: {fileID: 4523156393158061897}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SeasonSwitcher
-  m_TagString: Untagged
+  m_TagString: SeasonCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4523156393158061898}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 2989882813284409956}
   m_Layer: 2
   m_Name: Bubble
-  m_TagString: Untagged
+  m_TagString: SeasonCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d816625877c7845afaa8b790a8baab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2.5
+  radius: 3
 --- !u!1 &8091696685751488159
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 1822357986342535884}
   - component: {fileID: 5094113640380058530}
   - component: {fileID: 8635003463077286066}
+  - component: {fileID: 4142103004928375344}
   m_Layer: 2
   m_Name: Center
   m_TagString: Untagged
@@ -293,6 +294,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &4142103004928375344
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091696685751488159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6928025220707134715
 PrefabInstance:
   m_ObjectHideFlags: 0
