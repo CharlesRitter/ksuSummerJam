@@ -8,9 +8,11 @@ public class PlayerDeath : MonoBehaviour
 
     private void Respawn(GameObject RespawnPoint)
     {
+        gameObject.SetActive(false);
         gameObject.GetComponent<CharacterController>().enabled = false;
         gameObject.transform.position = spawn.transform.position;
         gameObject.GetComponent<CharacterController>().enabled = true;
+        gameObject.SetActive(true);
     }
 
     private void OnTriggerStay(Collider other)
