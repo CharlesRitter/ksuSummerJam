@@ -6,6 +6,7 @@ public class DoorScript : MonoBehaviour
 {
     public GameObject wk;
     public GameObject sk;
+    public float endY;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(wk.GetComponent<KeyPickupLogic>().collected && sk.GetComponent<KeyPickupLogic>().collected && transform.position.y > -1f)
+        if(wk.GetComponent<KeyPickupLogic>().collected && sk.GetComponent<KeyPickupLogic>().collected && transform.position.y > endY)
         {
             transform.Translate(Vector3.down * Time.deltaTime, Space.World);
         }
