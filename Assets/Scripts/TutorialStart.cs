@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class TutorialStart : MonoBehaviour
 {
+    public Canvas startScreen;
+
     private Camera mainCamera;
-    // Start is called before the first frame update
+
     void Start()
     {
+        startScreen.gameObject.SetActive(true);
         mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -25,10 +27,11 @@ public class TutorialStart : MonoBehaviour
                 {
                     GameObject seasonSwitcher = hit.transform.gameObject;
                     GetComponentInParent<GetCircleWorldPosition>().seasonSwitcher = hit.transform.gameObject;
+                    startScreen.gameObject.SetActive(false);
                     seasonSwitcher.GetComponent<Collider>().enabled = false;
                     foreach (Transform child in hit.transform)
                     {
-                        child.gameObject.SetActive(true);
+                        child.gameObject.GetComponent<Collider>().enabled = true;
                     }
                 }
             }
