@@ -24,20 +24,22 @@ public class PlatformSwitch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject collidedObject = other.transform.parent.gameObject;
+        GameObject collidedObject = other.gameObject;
         if (collidedObject.tag == "SeasonCollider")
         {
             isActive = false;
+            gameObject.tag = "Untagged";
         }
         
     }
 
     private void OnTriggerExit(Collider other)
     {
-        GameObject collidedObject = other.transform.parent.gameObject;
+        GameObject collidedObject = other.gameObject;
         if (collidedObject.tag == "SeasonCollider")
         {
             isActive = true;
+            gameObject.tag = "Damage";
         }
     }
 }

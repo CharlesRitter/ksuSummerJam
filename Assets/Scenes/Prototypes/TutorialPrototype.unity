@@ -726,7 +726,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &469328038
 MonoBehaviour:
@@ -2071,6 +2071,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951935284}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.47008726, b: 0, a: 0.58431375}
+  m_EffectDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1951935287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951935284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -2197,6 +2212,51 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4523156393158061897, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523156393158061897, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523156393158061897, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091696685751488159, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091696685751488159, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_TagString
+      value: SeasonCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009214033280972419, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6662387667410986996, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
         type: 3}
       propertyPath: m_Layer
@@ -2206,6 +2266,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snow Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 478415561426733451, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478415561426733451, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7475473482116692610, guid: 502cd4eb69466084a8e0b2cca4dbe0f9,
         type: 3}
