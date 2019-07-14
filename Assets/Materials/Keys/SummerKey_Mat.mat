@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ground_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: f7821ed528af5af4b95fc59811e55f60,
+  m_Name: SummerKey_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 5319507327cf46242a38efc8ea36f680,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,28 +21,28 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4A431BA7:
-        m_Texture: {fileID: 2800000, guid: d06c19850ee13bf4086860fd02cf417d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_AC222560:
-        m_Texture: {fileID: 2800000, guid: e9866699a4ddce642b7da4aeaa74d279, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0f3803828d72e4b429e55331eaad3c09, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_E75BE66C:
-        m_Texture: {fileID: 2800000, guid: f3c7e12938d22604eb51dc02b394dd80, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0f3803828d72e4b429e55331eaad3c09, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_F71FCFA8:
-        m_Texture: {fileID: 2800000, guid: 9cb8a98194aa15642b2ceaa3011ccde3, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_1BF72B7: 0
     - Vector1_44D2ECE3: 0.5
+    - Vector1_5875D628: 1
     - Vector1_664ADDFC: 0
     - Vector1_695C339D: 0
     - Vector1_F182C921: 0.5
     m_Colors:
-    - Color_5810BA95: {r: 0.9528302, g: 0.89084226, b: 0.73260057, a: 1}
-    - Color_B7923ACB: {r: 1, g: 1, b: 1, a: 1}
-    - Vector2_A12ACC8B: {r: 7, g: 7, b: 0, a: 0}
-    - Vector2_D6E63196: {r: 3, g: 3, b: 0, a: 0}
+    - Color_7CB0CF38: {r: 1, g: 1, b: 1, a: 1}
+    - Color_F76D8B54: {r: 1, g: 1, b: 1, a: 1}
