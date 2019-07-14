@@ -12,12 +12,20 @@ public class AIBehavior : MonoBehaviour
     public float rotationSpeed;
     public float blowForce = 50f;
     public bool blowing;
+    public float fadeInTime = .5f;
+    public AudioClip snowmanMovementSound;
+    public float movementSoundVolume = 1f;
+    public AudioClip snowmanBlowSound;
+    public float blowSoundVolume = 1f;
+    public AudioClip snowmanLaughSound;
 
 
     NavMeshAgent navMeshAgent;
+    AudioSource audioSource;
     GameObject player;
     bool inBlowRange;
-    bool melting;
+    bool stopped;
+    bool moving;
     float blowRange = 20f;
 
     void Awake()
@@ -28,6 +36,7 @@ public class AIBehavior : MonoBehaviour
         target = player;
         blowRange = Vector3.Distance(transform.position, blowRangeTransform.position);
         navMeshAgent.updateRotation = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -38,15 +47,36 @@ public class AIBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FaceTarget(target.transform.position);
+        if (!stopped)
+        {
+            FaceTarget(target.transform.position);
 
-        MoveTo(player.transform.position);
+            MoveTo(player.transform.position);
 
-        if (GetPlayerDistance() < blowRange)
-            StartBlowing();
+            // if(!moving && navMeshAgent.){
+            //     moving = true;
+            //     PlaySnowmanMovementSound();
+            // }
+            // if(moving){
+            //     moving = false;
+            //     StopSnowmanMovementSound();
+            // }
+        }
+
+
+        if (GetPlayerDistance() < blowRange && !stopped)
+        {
+            if (!blowing){
+                StartBlowing();
+                //StopSnowmanMovementSound();
+            }
+        }
         else
         {
-            StopBlowing();
+            if (blowing) {
+                StopBlowing();
+                //PlaySnowmanMovementSound();
+            }
         }
     }
 
@@ -59,12 +89,16 @@ public class AIBehavior : MonoBehaviour
     {
         blowing = true;
         partSys.Play();
+
+        Debug.Log("play blow");
+        //PlaySnowmanBlowSound();
     }
 
     void StopBlowing()
     {
         blowing = false;
         partSys.Stop();
+        //StopSnowmanBlowSound();
     }
 
     void FaceTarget(Vector3 destination)
@@ -80,9 +114,62 @@ public class AIBehavior : MonoBehaviour
         return Vector3.Distance(player.transform.position, transform.position);
     }
 
-    public void Melt()
+    public void StopSnowman()
     {
-        melting = true;
+        navMeshAgent.updatePosition = false;
+        stopped = true;
     }
 
+    public void StartSnowman()
+    {
+        navMeshAgent.updatePosition = true;
+        stopped = false;
+    }
+    void PlaySnowmanMovementSound()
+    {
+        audioSource.clip = snowmanMovementSound;
+        StartCoroutine(FadeIn(audioSource, fadeInTime, movementSoundVolume));
+    }
+
+    void StopSnowmanMovementSound()
+    {
+        audioSource.clip = snowmanMovementSound;
+        StartCoroutine(FadeOut(audioSource, fadeInTime, movementSoundVolume));
+    }
+
+
+    void PlaySnowmanBlowSound()
+    {
+        audioSource.clip = snowmanBlowSound;
+        StartCoroutine(FadeIn(audioSource, fadeInTime, blowSoundVolume));
+    }
+
+    void StopSnowmanBlowSound()
+    {
+        audioSource.clip = snowmanBlowSound;
+        StartCoroutine(FadeOut(audioSource, fadeInTime, blowSoundVolume));
+    }
+
+
+
+    IEnumerator FadeIn(AudioSource audioSource, float FadeTime, float fadeToVolume)
+    {
+        audioSource.Play();
+        audioSource.volume = 0f;
+        while (audioSource.volume < fadeToVolume)
+        {
+            audioSource.volume += Time.deltaTime / FadeTime;
+            yield return null;
+        }
+    }
+    IEnumerator FadeOut(AudioSource audioSource, float FadeTime, float fadeFromVolume)
+    {
+        audioSource.Play();
+        audioSource.volume = fadeFromVolume;
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= Time.deltaTime / FadeTime;
+            yield return null;
+        }
+    }
 }
