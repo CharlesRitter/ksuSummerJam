@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snow_Mat_One_Front
+  m_Name: PleaseWorkMat
   m_Shader: {fileID: -6465566751694194690, guid: 817569f30da498d4b98f6129a2f862a2,
     type: 3}
   m_ShaderKeywords: 
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_B8BE6BFE:
-        m_Texture: {fileID: 8400000, guid: 2e373cb734b95b74693fd2781187d6e0, type: 2}
+        m_Texture: {fileID: 8400000, guid: fed59cc8b35e39f4db1880cde88b5d2c, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
