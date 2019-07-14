@@ -23,6 +23,7 @@ public class GetCircleWorldPosition : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 seasonSwitcher.transform.position = hit.point;
+                Shader.SetGlobalVector("_BubblePos", seasonSwitcher.transform.position);
             }
         }
     }
